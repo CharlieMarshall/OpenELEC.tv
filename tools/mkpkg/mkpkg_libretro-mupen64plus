@@ -22,7 +22,7 @@
 PKG_NAME="libretro-mupen64plus"
 PKG_VERSION=""
 BRANCH="master"
-GIT_REPO="https://github.com/libretro/mupen64plus-libretro.git"
+GIT_REPO="https://github.com/a1rwulf/mupen64plus-libretro.git"
 
 git_clone() {
   # git_clone https://repo.url branch ./target_dir [githash]
