@@ -11,7 +11,7 @@ diff --git a/mupen64plus-core/src/plugin/emulate_game_controller_via_libretro.c 
 index ee13999..c560497 100644
 --- a/mupen64plus-core/src/plugin/emulate_game_controller_via_libretro.c
 +++ b/mupen64plus-core/src/plugin/emulate_game_controller_via_libretro.c
-@@ -777,172 +777,6 @@ void inputInitiateCallback(const char *headername)
+@@ -766,172 +766,6 @@ void inputInitiateCallback(const char *headername)
        return;
     }
  
