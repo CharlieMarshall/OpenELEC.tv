@@ -19,10 +19,10 @@
 #  http://www.gnu.org/copyleft/gpl.html
 ################################################################################
 
-PKG_NAME="libretro-bsnes-mercury"
+PKG_NAME="game.libretro.bsnes-mercury-performance"
 PKG_VERSION=""
 BRANCH="master"
-GIT_REPO="https://github.com/libretro/bsnes-mercury.git"
+GIT_REPO="git://github.com/kodi-game/$PKG_NAME.git"
 
 git_clone() {
   # git_clone https://repo.url branch ./target_dir [githash]

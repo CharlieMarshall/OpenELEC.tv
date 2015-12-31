@@ -16,32 +16,33 @@
 #  along with OpenELEC.  If not, see <http://www.gnu.org/licenses/>.
 ################################################################################
 
-PKG_NAME="libretro-bsnes-mercury"
-PKG_VERSION="523bdc5"
+PKG_NAME="game.libretro.snes9x-next"
+PKG_VERSION="edbfb04"
 PKG_REV="1"
 PKG_ARCH="any"
-PKG_LICENSE="GPLv2"
-PKG_SITE="https://github.com/libretro/bsnes-mercury"
+PKG_LICENSE="GPL"
+PKG_SITE="https://github.com/kodi-game/game.libretro.snes9x-next"
 PKG_URL="$DISTRO_SRC/$PKG_NAME-$PKG_VERSION.tar.xz"
 PKG_DEPENDS_TARGET="toolchain kodi-platform"
 PKG_PRIORITY="optional"
 PKG_SECTION=""
-PKG_SHORTDESC="game.libretro.beetle-bsnes: Beetle bSNES for Kodi"
-PKG_LONGDESC="game.libretro.beetle-bsnes: Beetle bSNES for Kodi"
+PKG_SHORTDESC="game.libretro.snes9x-next: snes9x-next for Kodi"
+PKG_LONGDESC="game.libretro.snes9x-next: snes9x-next for Kodi"
 PKG_AUTORECONF="no"
-PKG_IS_ADDON="no"
 
-PKG_LIBNAME="bsnes_mercury_accuracy_libretro.so"
-PKG_LIBPATH="out/$PKG_LIBNAME"
-PKG_LIBVAR="BSNES_MERCURY_LIB"
+PKG_IS_ADDON="yes"
+PKG_ADDON_TYPE="kodi.gameclient"
 
-make_target() {
-  make
+configure_target() {
+  cmake -DCMAKE_TOOLCHAIN_FILE=$CMAKE_CONF \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_MODULE_PATH=$SYSROOT_PREFIX/usr/lib/kodi \
+        -DCMAKE_PREFIX_PATH=$SYSROOT_PREFIX/usr \
+        ..
 }
 
-makeinstall_target() {
-  mkdir -p $INSTALL/usr/lib
-  cp $PKG_LIBPATH $INSTALL/usr/lib/$PKG_LIBNAME
-  echo "set($PKG_LIBVAR $INSTALL/usr/lib/$PKG_LIBNAME)" > $SYSROOT_PREFIX/usr/$PKG_NAME-config.cmake
+addon() {
+  mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/
+  cp -PR $PKG_BUILD/.install_pkg/usr/share/kodi/addons/$PKG_NAME/* $ADDON_BUILD/$PKG_ADDON_ID/
+  cp -PL $PKG_BUILD/.install_pkg/usr/lib/kodi/addons/$PKG_NAME/*.so $ADDON_BUILD/$PKG_ADDON_ID/
 }
-
