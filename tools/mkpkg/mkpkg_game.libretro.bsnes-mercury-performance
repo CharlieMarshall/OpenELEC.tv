@@ -19,7 +19,7 @@
 #  http://www.gnu.org/copyleft/gpl.html
 ################################################################################
 
-PKG_NAME="game.libretro.bsnes-mercury"
+PKG_NAME="game.libretro.bsnes-mercury-performance"
 PKG_VERSION=""
 BRANCH="master"
 GIT_REPO="git://github.com/kodi-game/$PKG_NAME.git"

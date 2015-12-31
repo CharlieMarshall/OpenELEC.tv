@@ -16,18 +16,18 @@
 #  along with OpenELEC.  If not, see <http://www.gnu.org/licenses/>.
 ################################################################################
 
-PKG_NAME="game.libretro.bsnes-mercury"
-PKG_VERSION="c182f42"
+PKG_NAME="game.libretro.bsnes-mercury-balanced"
+PKG_VERSION="726db889"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
-PKG_SITE="https://github.com/kodi-game/game.libretro.bsnes-mercury"
+PKG_SITE="https://github.com/kodi-game/game.libretro.bsnes-mercury-balanced"
 PKG_URL="$DISTRO_SRC/$PKG_NAME-$PKG_VERSION.tar.xz"
 PKG_DEPENDS_TARGET="toolchain kodi-platform"
 PKG_PRIORITY="optional"
 PKG_SECTION=""
-PKG_SHORTDESC="game.libretro.bsnes-mercury: bSNES Mercury for Kodi"
-PKG_LONGDESC="game.libretro.bsnes-mercury: bSNES Mercury for Kodi"
+PKG_SHORTDESC="game.libretro.bsnes-mercury-balanced: bSNES Mercury for Kodi"
+PKG_LONGDESC="game.libretro.bsnes-mercury-balanced: bSNES Mercury for Kodi"
 PKG_AUTORECONF="no"
 
 PKG_IS_ADDON="yes"

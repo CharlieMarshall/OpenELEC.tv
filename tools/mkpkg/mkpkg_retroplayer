@@ -26,7 +26,9 @@
 ./mkpkg_game.libretro.beetle-pce-fast
 ./mkpkg_game.libretro.bluemsx
 ./mkpkg_game.libretro.bnes
-./mkpkg_game.libretro.bsnes-mercury
+./mkpkg_game.libretro.bsnes-mercury-accuracy
+./mkpkg_game.libretro.bsnes-mercury-balanced
+./mkpkg_game.libretro.bsnes-mercury-performance
 ./mkpkg_game.libretro.dosbox
 ./mkpkg_game.libretro.fceumm
 ./mkpkg_game.libretro.gambatte
